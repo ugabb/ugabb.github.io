@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root{
+}
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+section{
+    height: 100vh;
+    background-color: #8F87A1;
+}
+
+.score{
+    color: white;
+    height: 20vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.score h2{
+    font-size: 30px;
+}
+
+.score p{
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+}
+    
+.intro{
+    color: white;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: opacity 0.5s ease;
+}
+
+.intro h1{
+    font-size: 60px;
+}
+
+.intro button, .match button{
+    width: 150px;
+    height: 50px;
+    background: none;
+    color: white;
+    font-size: 20px;
+    background:#80ED91 ;
+    border-radius: 3px;
+    border: none;
+}
+
+.intro button:hover{
+    background:#80EDDC ;
+}
+
+.match{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: opacity 0.5s ease 0.5s;
+}
+
+.winner{
+    color: white;
+    text-align: center;
+    font-size: 50px;
+}
+
+.hands, .options{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.options button{
+    cursor: pointer;
+    margin: 5px;
+}
+
+.options button:hover{
+    background:#427970 ;
+}
+
+.options{
+    margin: 20px;
+}
+
+.player-hand{
+    max-width: 200px;
+   
+}
+.computer-hand{
+    max-width: 200px;
+    transform: rotateY(180deg);
+}
+
+div.fadeOut{
+    opacity: 0;
+    pointer-events: none;
+}
+
+div.fadeIn{
+    opacity: 1;
+    pointer-events: all;
+}
+
+i{
+    color: #ebbf8f;
+}
+
+@keyframes shakePlayer{
+    0%{
+        transform: translateY(0px);
+    }
+    15%{
+        transform:  translateY(-50px);
+    }
+    20%{
+        transform:  translateY(0px);
+    }
+    25%{
+        transform:  translateY(-50px);
+    }
+    35%{
+        transform:  translateY(0px);
+    }
+    50%{
+        transform:  translateY(-50px);
+    }
+    65%{
+        transform:  translateY(-50px);
+    }
+    75%{
+        transform:  translateY(-50px);
+    }
+    85%{
+        transform:  translateY(-50px);
+    }
+    100%{
+        transform:  translateY(0px);
+    }
+}
+
+@keyframes shakeComputer{
+    0%{
+        transform:rotateY(180deg) translateY(0px);
+    }
+    15%{
+        transform:rotateY(180deg) translateY(-50px);
+    }
+    20%{
+        transform:rotateY(180deg) translateY(0px);
+    }
+    25%{
+        transform:rotateY(180deg) translateY(-50px);
+    }
+    35%{
+        transform:rotateY(180deg) translateY(0px);
+    }
+    50%{
+        transform:rotateY(180deg) translateY(-50px);
+    }
+    65%{
+        transform:rotateY(180deg) translateY(-50px);
+    }
+    75%{
+        transform:rotateY(180deg) translateY(-50px);
+    }
+    85%{
+        transform:rotateY(180deg) translateY(-50px);
+    }
+    100%{
+        transform:rotateY(180deg) translateY(0px);
+    }
+}
